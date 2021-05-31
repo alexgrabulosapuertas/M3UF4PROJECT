@@ -42,24 +42,28 @@ public class Botiga {
                     } while (opcioSubMenu != 0);
                 }
                 case 3 -> {
+                    int clientId = 4;
+                    int botigaId = 1;
                     Interficie.mostrarPerPantalla("Has seleccionat: Afegir");
                     Interficie.mostrarPerPantalla("Quin es el teu nom?");
                     String nom = s.next();
                     Interficie.mostrarPerPantalla("Quins son els teus cognoms?");
-                    String[] cognoms = {s.next(), s.next()};
+                    String cognoms = s.next();
                     Interficie.mostrarPerPantalla("Quin es el teu telefon?");
                     String telefon = s.next();
-                    Interficie.mostrarPerPantalla("Quina es la teva adreça?");
-                    String adreca = s.next();
                     Interficie.mostrarPerPantalla("Quin es el teu DNI?");
                     String dni = s.next();
                     Interficie.mostrarPerPantalla("Quin es el teu sexe? (M/F)");
                     char sexe = s.next().charAt(0);
-                    Interficie.mostrarPerPantalla("Quina es el teu correu?");
-                    String correu = s.next();
                     Interficie.mostrarPerPantalla("Quants anys tens?");
                     int edat = s.nextInt();
-                    Client client = new Client(nom, cognoms, telefon, adreca, dni, sexe, correu, edat);
+                    Interficie.mostrarPerPantalla("Quina es el teu email?");
+                    String email = s.next();
+                    Interficie.mostrarPerPantalla("Quina es la teva adreça?");
+                    String adreca = s.next();
+                    Interficie.mostrarPerPantalla("Quina es la teva població?");
+                    String poblacio = s.next();
+                    Client client = new Client(clientId, botigaId,nom,cognoms,dni,edat,sexe,telefon,email,adreca,poblacio);
                 }
                 case 4 -> Interficie.mostrarPerPantalla("Has seleccionat: Esborrar");
                 case 0 -> Interficie.mostrarPerPantalla("Has seleccionat: Sortir\nFins aviat!");
