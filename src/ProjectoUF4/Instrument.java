@@ -2,7 +2,7 @@ package ProjectoUF4;
 
 public class Instrument {
     private String nom, tipus, color;
-    private float preu, tamany;
+    private float preu;
 
     public void setColor(){}
 
@@ -19,5 +19,5 @@ public class Instrument {
     }
 }
 enum color{
-    ROJO, AZUL, BLANCO, NEGRO, MARRON
+    VERMELL, BLAU, BLANC, NEGRE, MARRO, OR
 }

@@ -1,12 +1,19 @@
 package ProjectoUF4;
 
+import java.util.ArrayList;
+
 public class Client {
-    private String nom, telefon, adreca, DNI, email;
+    private String nom;
+    private String telefon;
+    private String adreca;
+    private String DNI;
+    private String email;
     private String[] cognoms;
     private char sexe;
-    private int edat;
+    private int edat, id;
+    ArrayList<Client> clients = new ArrayList<Client>();
 
-    public Client(String nom, String[] cognoms, String telefon, String adreca, String DNI, char sexe, String email, int edat) {
+    public Client(String nom, String[] cognoms, String telefon, String adreca, String DNI, char sexe, String email, int edat, int id) {
         this.nom = nom;
         this.cognoms = cognoms;
         this.telefon = telefon;
@@ -15,6 +22,8 @@ public class Client {
         this.sexe = sexe;
         this.email = email;
         this.edat = edat;
+        this.id = clients.size();
+        clients.add(new Client(nom, cognoms, telefon, adreca, DNI, sexe, email, edat, id));
     }
 
     public String getNom() {
@@ -79,5 +88,12 @@ public class Client {
 
     public void setEdat(int edat) {
         this.edat = edat;
+    }
+
+    public int getId(){
+        return id;
+    }
+    public void setId(){
+        this.id = id;
     }
 }
