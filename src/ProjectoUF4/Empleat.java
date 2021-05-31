@@ -1,13 +1,12 @@
 package ProjectoUF4;
 
-class Empleats {
+public class Empleat {
     private String nom, DNI, adreca, correu, telefon;
     private String[] cognoms;
     private char sexe;
     private int edat;
 
-
-    public Empleats(String nom, String[] cognoms, char sexe, String DNI, String adreca, String correu, String telefon, int edat) {
+    public Empleat(String nom, String[] cognoms, char sexe, String DNI, String adreca, String correu, String telefon, int edat) {
         this.nom = nom;
         this.cognoms = cognoms;
         this.sexe = sexe;
