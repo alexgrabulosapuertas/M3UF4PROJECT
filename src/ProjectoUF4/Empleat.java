@@ -1,75 +1,46 @@
 package ProjectoUF4;
 
-public class Empleat {
-    private String nom, DNI, adreca, correu, telefon;
-    private String[] cognoms;
-    private char sexe;
-    private int edat;
+public class Empleat extends Persona {
+    private int empleatId;
+    private float salari;
 
-    public Empleat(String nom, String[] cognoms, char sexe, String DNI, String adreca, String correu, String telefon, int edat) {
-        this.nom = nom;
-        this.cognoms = cognoms;
-        this.sexe = sexe;
-        this.DNI = DNI;
-        this.adreca = adreca;
-        this.correu = correu;
-        this.telefon = telefon;
-        this.edat = edat;
+    public Empleat(int botigaId, String nom, String cognoms, String DNI, int edat, char sexe, String telefon, String email, String adreca, String poblacio, int empleatId, float salari) {
+        super(botigaId, nom, cognoms, DNI, edat, sexe, telefon, email, adreca, poblacio);
+        this.empleatId = empleatId;
+        this.salari = salari;
     }
 
-    public String getNom() {
-        return nom;
+    public int getEmpleatId() {
+        return empleatId;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setEmpleatId(int empleatId) {
+        this.empleatId = empleatId;
     }
 
-    public String[] getCognoms() {
-        return cognoms;
+    public float getSalari() {
+        return salari;
     }
 
-    public void setCognoms(String[] cognoms) {
-        this.cognoms = cognoms;
+    public void setSalari(float salari) {
+        this.salari = salari;
     }
 
-    public char getSexe() {
-        return sexe;
-    }
-
-    public void setSexe(char sexe) {
-        this.sexe = sexe;
-    }
-
-    public String getDNI() {
-        return DNI;
-    }
-
-    public void setDNI(String DNI) {
-        this.DNI = DNI;
-    }
-
-    public String getAdreca() {
-        return adreca;
-    }
-
-    public void setAdreca(String adreca) {
-        this.adreca = adreca;
-    }
-
-    public String getCorreu() {
-        return correu;
-    }
-
-    public void setCorreu(String correu) {
-        this.correu = correu;
-    }
-
-    public String getTelefon() {
-        return telefon;
-    }
-
-    public void setTelefon(String telefon) {
-        this.telefon = telefon;
+    @Override
+    public String toString() {
+        return "Empleat{" +
+                "botigaId=" + botigaId +
+                ", nom='" + nom + '\'' +
+                ", cognoms='" + cognoms + '\'' +
+                ", DNI='" + DNI + '\'' +
+                ", edat=" + edat +
+                ", sexe=" + sexe +
+                ", telefon='" + telefon + '\'' +
+                ", email='" + email + '\'' +
+                ", adreca='" + adreca + '\'' +
+                ", poblacio='" + poblacio + '\'' +
+                ", empleatId=" + empleatId +
+                ", salari=" + salari +
+                '}';
     }
 }
