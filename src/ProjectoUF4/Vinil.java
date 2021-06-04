@@ -1,15 +1,38 @@
 package ProjectoUF4;
 
 public class Vinil {
-    private String nom, autor;
-    private int any, temps;
+    private int vinilId;
+    private int clientId;
+    private int empleatId;
+    private String nom;
+    private float preu;
+    private String autor;
+    private int any;
+    private String estil;
+    private Estil estils;
 
-    public Vinil(String nom, String autor, int any, int temps) {
+    public Vinil(int vinilId, int clientId, int empleatId, String nom_vinil, float preu_vinil, String autor_vinil, int any_vinil, String estil_vinil) {
+        this.vinilId = vinilId;
+        this.clientId = clientId;
+        this.empleatId = empleatId;
+        this.nom = nom_vinil;
+        this.preu = preu_vinil;
+        this.autor = autor_vinil;
+        this.any = any_vinil;
+        this.estil = estil_vinil;
+    }
+
+    public Vinil(int vinilId, int clientId, int empleatId, String nom, float preu, String autor, int any, Estil estils) {
+        this.vinilId = vinilId;
+        this.clientId = clientId;
+        this.empleatId = empleatId;
         this.nom = nom;
+        this.preu = preu;
         this.autor = autor;
         this.any = any;
-        this.temps = temps;
+        this.estils = estils;
     }
+
 
     public String getNom() {
         return nom;
@@ -35,14 +58,58 @@ public class Vinil {
         this.any = any;
     }
 
-    public int getTemps() {
-        return temps;
+    public float getPreu() {
+        return preu;
     }
 
-    public void setTemps(int temps) {
-        this.temps = temps;
+    public void setPreu(float preu) {
+        this.preu = preu;
+    }
+
+    public int getVinilId() {
+        return vinilId;
+    }
+
+    public void setVinilId(int vinilId) {
+        this.vinilId = vinilId;
+    }
+
+    public int getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(int clientId) {
+        this.clientId = clientId;
+    }
+
+    public int getEmpleatId() {
+        return empleatId;
+    }
+
+    public void setEmpleatId(int empleatId) {
+        this.empleatId = empleatId;
+    }
+
+    public String getEstil() {
+        return estil;
+    }
+
+    public void setEstil(String estil) {
+        this.estil = estil;
+    }
+
+    @Override
+    public String toString() {
+        return "Vinil{" +
+                "vinil_id=" + vinilId +
+                ", client_id=" + clientId +
+                ", empleat_id=" + empleatId +
+                ", nom='" + nom + '\'' +
+                ", preu=" + preu +
+                ", autor='" + autor + '\'' +
+                ", any=" + any +
+                ", estil='" + estil + '\'' +
+                '}';
     }
 }
-enum Estil{
-    ROCK, PUNK, POP, RAP, TRAP, CLASSIC
-}
+enum Estil{ROCK, PUNK, POP, RAP, TRAP, CLASSIC}

@@ -9,6 +9,11 @@ public class Client extends Persona {
         this.clientId = clientId;
     }
 
+    public Client(String nom, String cognoms, int clientId) {
+        super(nom, cognoms);
+        this.clientId = clientId;
+    }
+
     public int getClientId() {
         return clientId;
     }

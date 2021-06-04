@@ -15,9 +15,7 @@ public class ConnexioBD {
         try {
             Class.forName(driver);
             connection = DriverManager.getConnection(url, user, password);
-            if (connection != null) {
-                System.out.println("Connexió de la base de dades establerta.");
-            }
+
 
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error al connectar amb la base de dades:" + e);
@@ -30,6 +28,5 @@ public class ConnexioBD {
 
     public void deconnectar() {
         connection = null;
-        System.out.println("Connexió amb la base de dades tancada.");
     }
 }
