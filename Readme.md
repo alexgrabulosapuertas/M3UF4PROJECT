@@ -126,24 +126,24 @@
   
   <h3> UML </h3>
 
-<h4> Diagrama de classes versió 1 </h4>
+<h4> Diagrama de classes versió 1: </h4>
 
 ![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/V1Complet.PNG)
 
 
-<h4> Diagrama de classes versió 2  </h4>
+<h4> Diagrama de classes versió 2:  </h4>
 
 ![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/V2Complet.PNG)
 
 <p> En aquest diagrama a diferència de l'altre és pot veure com apareixen elements nous, com ara aparèix la taula "Concert" i "Carro". A la primera se li ha creat una generalització. D'altra banda la taula "Carro" permet calcular el preu total gastat per el client, també si aquest s'elimina la taula "Carro" també s'eliminara. També se li ha creat una associativa per a poder tenir el número del carro.
 
-<h4> Diagrama d'ús </h4>
+<h4> Diagrama d'ús: </h4>
 
 ![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/UsComplet.PNG)
 
 <p> En aquest diagrama es pot veure com funciona la nostra aplicació, aquí teniu la documentació per a poder-ho entendre amb més facilitat. </p>
 
-<p> Aquestes són les funcions les quals podrà fer l'usuari Administrador </p>
+<p> Aquestes són les funcions les quals podrà fer l'usuari Administrador: </p>
 
 ![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/A.Client.PNG)
 
@@ -163,7 +163,7 @@
 
 ![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/CarregarDades.PNG)
 
-<p> Aquestes són les funcions les quals podrà fer l'usuari Client </p>
+<p> Aquestes són les funcions les quals podrà fer l'usuari Client: </p>
 
 ![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/S.Instrument.PNG)
 
