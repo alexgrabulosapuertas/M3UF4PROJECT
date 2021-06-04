@@ -1,13 +1,34 @@
 package ProjectoUF4;
 
 public class Instrument {
-    private String nom, tipus, color;
+    private int instrumentId;
+    private int clientId;
+    private int empleatId;
+    private String nom;
+    private int tipus;
+    private String color;
+    private String material;
     private float preu;
 
-    public void setColor(){}
-
-    public Instrument(String nom) {
+    public Instrument(int instrumentId, int clientId, int empleatId, String nom, int tipus, String color, String material, float preu){
+        this.instrumentId = instrumentId;
+        this.clientId = clientId;
+        this.empleatId = empleatId;
         this.nom = nom;
+        this.tipus = tipus;
+        this.color = color;
+        this.material = material;
+        this.preu = preu;
+    }
+
+    public Instrument(int instrumentId, int clientId, int empleatId, String nom, String color, String material, float preu) {
+        this.instrumentId = instrumentId;
+        this.clientId = clientId;
+        this.empleatId = empleatId;
+        this.nom = nom;
+        this.color = color;
+        this.material = material;
+        this.preu = preu;
     }
 
     public String getNom() {
@@ -17,7 +38,76 @@ public class Instrument {
     public void setNom(String nom) {
         this.nom = nom;
     }
+
+    public int getTipus() {
+        return tipus;
+    }
+
+    public void setTipus(int tipus) {
+        this.tipus = tipus;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public float getPreu() {
+        return preu;
+    }
+
+    public void setPreu(float preu) {
+        this.preu = preu;
+    }
+
+    public int getInstrumentId() {
+        return instrumentId;
+    }
+
+    public void setInstrumentId(int instrumentId) {
+        this.instrumentId = instrumentId;
+    }
+
+    public int getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(int clientId) {
+        this.clientId = clientId;
+    }
+
+    public int getEmpleatId() {
+        return empleatId;
+    }
+
+    public void setEmpleatId(int empleatId) {
+        this.empleatId = empleatId;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    @Override
+    public String toString() {
+        return "Instrument{" +
+                "instrumentId=" + instrumentId +
+                ", clientId=" + clientId +
+                ", empleatId=" + empleatId +
+                ", nom='" + nom + '\'' +
+                ", tipus='" + tipus + '\'' +
+                ", color='" + color + '\'' +
+                ", material='" + material + '\'' +
+                ", preu=" + preu +
+                '}';
+    }
 }
-enum color{
-    VERMELL, BLAU, BLANC, NEGRE, MARRO, OR
-}
+
+enum COLOR{VERMELL, BLAU, BLANC, NEGRE, MARRO, OR}

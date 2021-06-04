@@ -10,6 +10,11 @@ public class Empleat extends Persona {
         this.salari = salari;
     }
 
+    public Empleat(String nom, String cognoms, int empleatId) {
+        super(nom, cognoms);
+        this.empleatId = empleatId;
+    }
+
     public int getEmpleatId() {
         return empleatId;
     }

@@ -1,9 +1,5 @@
 package ProjectoUF4;
 
-import java.sql.*;
-import java.util.ArrayList;
-
-
 public class Persona {
     protected int botigaId;
     protected String nom;
@@ -27,6 +23,11 @@ public class Persona {
         this.email = email;
         this.adreca = adreca;
         this.poblacio = poblacio;
+    }
+
+    public Persona(String nom, String cognoms) {
+        this.nom = nom;
+        this.cognoms = cognoms;
     }
 
     public int getBotigaId() {
