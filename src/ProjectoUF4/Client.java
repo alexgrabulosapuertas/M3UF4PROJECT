@@ -1,5 +1,4 @@
 package ProjectoUF4;
-
 public class Client extends Persona {
     private int clientId;
 
@@ -40,4 +39,3 @@ public class Client extends Persona {
                 '}';
     }
 }
-
