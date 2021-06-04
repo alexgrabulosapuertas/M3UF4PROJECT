@@ -125,5 +125,6 @@
   
   
   <h2>UML</h2>
+  <p>ESCRIBE AQUI EL TEXTO DEL ANIOL</p>
 
 <p>Aniol Barrilado Colom, Àlex Grabolusa Puertas i Manel Colàs Casals - Projecte UF4 - M03 Programació</p>
