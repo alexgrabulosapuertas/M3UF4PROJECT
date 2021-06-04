@@ -12,6 +12,13 @@ public class InserirBD {
     private static final String user = "root";
     private static final String password = "pastanaga";
 
+    /**
+     * Instrodueix el Vinil a la BD
+     * Li passan els objectes necessaris per a poder accedir a les seves funcions
+     * @param vinil
+     * @param cbd
+     * @since 04/06/2021
+     */
     public void inserirVinils(Vinil vinil, ConnexioBD cbd) {
         try {
             connection = DriverManager.getConnection(url, user, password);
@@ -34,6 +41,13 @@ public class InserirBD {
             throwables.printStackTrace();
         }
     }
+    /**
+     * Instrodueix el Client a la BD
+     * Li passan els objectes necessaris per a poder accedir a les seves funcions
+     * @param client
+     * @param cbd
+     * @since 04/06/2021
+     */
     public void inserirClients(Client client, ConnexioBD cbd){
         try{
             connection = DriverManager.getConnection(url, user, password);
@@ -59,6 +73,13 @@ public class InserirBD {
             throwables.printStackTrace();
         }
     }
+    /**
+     * Instrodueix el Instrument a la BD
+     * Li passan els objectes necessaris per a poder accedir a les seves funcions
+     * @param instrument
+     * @param cbd
+     * @since 04/06/2021
+     */
     public void inserirInstruments(Instrument instrument, ConnexioBD cbd){
         try {
             connection = DriverManager.getConnection(url, user, password);
@@ -81,6 +102,13 @@ public class InserirBD {
             throwables.printStackTrace();
         }
     }
+    /**
+     * Instrodueix el Empleat a la BD
+     * Li passan els objectes necessaris per a poder accedir a les seves funcions
+     * @param empleat
+     * @param cbd
+     * @since 04/06/2021
+     */
     public void inserirEmpleats(Empleat empleat, ConnexioBD cbd){
         try {
             connection = DriverManager.getConnection(url, user, password);

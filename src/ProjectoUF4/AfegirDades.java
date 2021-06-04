@@ -3,6 +3,15 @@ package ProjectoUF4;
 import java.util.Scanner;
 
 public class AfegirDades {
+    /**
+     * Crea un objecte de Vinil i crida a dues funcions per a instrodurir-ho a l'ArrayList<Vinil> i a la BD
+     * Se li pasan per paràmetre els objectes necessaris per a cridar a les funcions
+     * @param s
+     * @param b
+     * @param ibd
+     * @param cbd
+     * @since 04/06/2021
+     */
     public void afegirVinils(Scanner s, Botiga b, InserirBD ibd, ConnexioBD cbd){
         Interficie.imprimirCapcalera("Has seleccionat: Afegir vinils");
         Interficie.mostrarPerPantalla("Indica el vinil_id");
@@ -34,8 +43,16 @@ public class AfegirDades {
         b.afegirVinil(vinil);
         ibd.inserirVinils(vinil, cbd);
     }
-
-    public void afegirClients(Scanner s, Botiga b, InserirBD inserirBd, ConnexioBD cbd){
+    /**
+     * Crea un objecte de Client i crida a dues funcions per a instrodurir-ho a l'ArrayList<Client> i a la BD
+     * Se li pasan per paràmetre els objectes necessaris per a cridar a les funcions
+     * @param s
+     * @param b
+     * @param ibd
+     * @param cbd
+     * @since 04/06/2021
+     */
+    public void afegirClients(Scanner s, Botiga b, InserirBD ibd, ConnexioBD cbd){
         Interficie.imprimirCapcalera("Has seleccionat: Afegir clients");
         Interficie.mostrarPerPantalla("Indica el client_id");
         int client_id = s.nextInt();
@@ -59,11 +76,19 @@ public class AfegirDades {
         String poblacio = s.next();
         Client client = new Client(1, nom, cognom, dni, edat, sexe, telefon, email, adreca, poblacio,client_id);
         b.afegirClient(client);
-        inserirBd.inserirClients(client, cbd);
+        ibd.inserirClients(client, cbd);
     }
 
-
-    public void afegirInstruments(Scanner s, Botiga b, InserirBD inserirBd, ConnexioBD cbd){
+    /**
+     * Crea un objecte de Instrument i crida a dues funcions per a instrodurir-ho a l'ArrayList<Instrument> i a la BD
+     * Se li pasan per paràmetre els objectes necessaris per a cridar a les funcions
+     * @param s
+     * @param b
+     * @param ibd
+     * @param cbd
+     * @since 04/06/2021
+     */
+    public void afegirInstruments(Scanner s, Botiga b, InserirBD ibd, ConnexioBD cbd){
         Interficie.imprimirCapcalera("Has seleccionat: Afegir instruments");
         Interficie.mostrarPerPantalla("Indica el instrument_id");
         int instrument_id = s.nextInt();
@@ -98,10 +123,18 @@ public class AfegirDades {
         String material = s.next();
         Instrument instrument = new Instrument(instrument_id, client_id, empleat_id,nom, tipus, color, material, preu);
         b.afegirInstrument(instrument);
-        inserirBd.inserirInstruments(instrument, cbd);
+        ibd.inserirInstruments(instrument, cbd);
     }
-
-    public void afegirEmpleats(Scanner s, Botiga b, InserirBD inserirBd, ConnexioBD cbd){
+    /**
+     * Crea un objecte de Empleat i crida a dues funcions per a instrodurir-ho a l'ArrayList<Empleat> i a la BD
+     * Se li pasan per paràmetre els objectes necessaris per a cridar a les funcions
+     * @param s
+     * @param b
+     * @param ibd
+     * @param cbd
+     * @since 04/06/2021
+     */
+    public void afegirEmpleats(Scanner s, Botiga b, InserirBD ibd, ConnexioBD cbd){
         Interficie.imprimirCapcalera("Has seleccionat: Afegir empleats");
         Interficie.mostrarPerPantalla("Indica el empleat_id");
         int empleat_id = s.nextInt();
@@ -127,6 +160,6 @@ public class AfegirDades {
         float salari = s.nextFloat();
         Empleat empleat = new Empleat(1, nom, cognoms, DNI, edat, sexe, telefon, email, adreca, poblacio, empleat_id, salari);
         b.afegirEmpleat(empleat);
-        inserirBd.inserirEmpleats(empleat, cbd);
+        ibd.inserirEmpleats(empleat, cbd);
     }
 }

@@ -11,6 +11,10 @@ public class ConnexioBD {
     private static final String password = "pastanaga";
     private static final String url = "jdbc:mysql://db-botigamusica.cyhzsvfuetec.us-east-1.rds.amazonaws.com/botigamusica";
 
+    /**
+     * Es connecta a la BD utilitzant l'url, l'usuari i la contrasenya
+     * @since 04/06/2021
+     */
     public ConnexioBD() {
         try {
             Class.forName(driver);
@@ -22,10 +26,19 @@ public class ConnexioBD {
         }
     }
 
+    /**
+     * Obtenir la connecció
+     * @return
+     * @since 04/06/2021
+     */
     public Connection getConnection() {
         return connection;
     }
 
+    /**
+     * Desconnecctar de la BD
+     * @since 04/06/2021
+     */
     public void deconnectar() {
         connection = null;
     }

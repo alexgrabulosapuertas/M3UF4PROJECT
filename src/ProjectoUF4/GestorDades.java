@@ -7,6 +7,13 @@ import java.util.Scanner;
 public class GestorDades {
     ConnexioBD connect = new ConnexioBD();
     Connection c = connect.getConnection();
+
+    /**
+     * Es connecta a la BD, crea un Client per a cada client i l'afegeix a l'ArrayList<Client>
+     * Li passan l'objecte de la Botiga per a poder accedir a les seves funcions
+     * @param botiga
+     * @since 04/06/2021
+     */
     public void CarregarClient(Botiga botiga){
         try {
             botiga.setClients(new ArrayList<Client>());
@@ -36,7 +43,12 @@ public class GestorDades {
             System.out.println(e);
         }
     }
-
+    /**
+     * Es connecta a la BD, crea un Empleat per a cada empleat i l'afegeix a l'ArrayList<Empleat>
+     * Li passan l'objecte de la Botiga per a poder accedir a les seves funcions
+     * @param botiga
+     * @since 04/06/2021
+     */
     public void carregarEmpleat(Botiga botiga) {
         try {
             botiga.setEmpleats(new ArrayList<Empleat>());
@@ -68,6 +80,12 @@ public class GestorDades {
             System.out.println(e);
         }
     }
+    /**
+     * Es connecta a la BD, crea un Vinil per a cada vinil i l'afegeix a l'ArrayList<Vinil>
+     * Li passan l'objecte de la Botiga per a poder accedir a les seves funcions
+     * @param botiga
+     * @since 04/06/2021
+     */
     public void carregarVinils(Botiga botiga) {
         try {
             botiga.setVinils(new ArrayList<Vinil>());
@@ -93,7 +111,12 @@ public class GestorDades {
             System.out.println(e);
         }
     }
-
+    /**
+     * Es connecta a la BD, crea un Instrument per a cada instrument i l'afegeix a l'ArrayList<Instrument>
+     * Li passan l'objecte de la Botiga per a poder accedir a les seves funcions
+     * @param botiga
+     * @since 04/06/2021
+     */
     public void carregarInstruments (Botiga botiga) {
         try {
             botiga.setInstruments(new ArrayList<Instrument>());
@@ -119,6 +142,13 @@ public class GestorDades {
         }
     }
 
+    /**
+     * Elimina un Client de l'ArrayList<Client>
+     * Li passan els objectes necessaris per a poder accedir a les seves funcions
+     * @param botiga
+     * @param s
+     * @since 04/06/2021
+     */
     public void esborrarClient (Botiga botiga, Scanner s) {
         botiga.llistatClients();
         Interficie.mostrarPerPantalla("Digues el id del client que vols esborrar: ");
@@ -131,7 +161,13 @@ public class GestorDades {
         Interficie.mostrarPerPantalla("Clients restants:");
         botiga.llistatClients();
     }
-
+    /**
+     * Elimina un Empleat de l'ArrayList<Empleat>
+     * Li passan els objectes necessaris per a poder accedir a les seves funcions
+     * @param botiga
+     * @param s
+     * @since 04/06/2021
+     */
     public void esborrarEmpleat (Botiga botiga, Scanner s) {
         botiga.llistaEmpleat();
         Interficie.mostrarPerPantalla("Digues el id de l'empleat que vols esborrar: ");
@@ -144,7 +180,13 @@ public class GestorDades {
         Interficie.mostrarPerPantalla("Empleats restants:");
         botiga.llistaEmpleat();
     }
-
+    /**
+     * Elimina un Vinil de l'ArrayList<Vinil>
+     * Li passan els objectes necessaris per a poder accedir a les seves funcions
+     * @param botiga
+     * @param s
+     * @since 04/06/2021
+     */
     public void esborrarVinil (Botiga botiga, Scanner s) {
         botiga.llistaVinil();
         Interficie.mostrarPerPantalla("Digues el id del vinil que vols esborrar: ");
@@ -157,7 +199,13 @@ public class GestorDades {
         Interficie.mostrarPerPantalla("Vinils restants:");
         botiga.llistaVinil();
     }
-
+    /**
+     * Elimina un Instrument de l'ArrayList<Instrument>
+     * Li passan els objectes necessaris per a poder accedir a les seves funcions
+     * @param botiga
+     * @param s
+     * @since 04/06/2021
+     */
     public void esborrarInstrument (Botiga botiga, Scanner s) {
         botiga.llistaInstruments();
         Interficie.mostrarPerPantalla("Digues el id del instrument que vols esborrar: ");

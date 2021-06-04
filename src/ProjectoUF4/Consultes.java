@@ -3,8 +3,12 @@ package ProjectoUF4;
 import java.util.ArrayList;
 
 public class Consultes {
-
-    public void consultarEmpleatMesSalari(ConnexioBD cbd, ArrayList<Empleat> empleats){
+    /**
+     * Busca en els atributs de l'Empleat a l'ArrayList<Empleat> pasada per paràmetre i mostra el nom, l'ID i el salari de l'Empleat amb més salari
+     * @param empleats
+     * @since 04/06/2021
+     */
+    public void consultarEmpleatMesSalari(ArrayList<Empleat> empleats){
         //Comença amb -1 perque ningú tindrà salari negatiu
         float salari = -1;
         String nom = "";
@@ -19,7 +23,12 @@ public class Consultes {
         System.out.println("L'empleat amb més salari és: " + nom + " amb l'ID " + id + " i el seu salari és " + salari+"€.");
     }
 
-    public void consultarInstrumentMesBarat(ConnexioBD cbd, ArrayList<Instrument> instruments){
+    /**
+     * Busca en els atributs de l'Instrument a l'ArrayList<Instrument> pasada per paràmetre i mostra el nom, l'ID i el preu de l'Instrument més barat
+     * @param instruments
+     * @since 04/06/2021
+     */
+    public void consultarInstrumentMesBarat(ArrayList<Instrument> instruments){
         float preu = 1000000000;
         String nom = "";
         int id = 1;
@@ -32,7 +41,13 @@ public class Consultes {
         }
         System.out.println("El instrument més barat és: " + nom + " amb l'ID " + id + " i te un preu de " + preu+"€.");
     }
-    public void consultarVinilMesAntic(ConnexioBD cbd, ArrayList<Vinil> vinils){
+
+    /**
+     * Busca en els atributs de Vinil a l'ArrayList<Vinil> pasada per paràmetre per a mostrar el nom, l'ID, l'autor i l'any del Vinil més antic
+     * @param vinils
+     * @since 04/06/2021
+     */
+    public void consultarVinilMesAntic(ArrayList<Vinil> vinils){
         int any = 3000;
         String nom = "";
         String autor = "";

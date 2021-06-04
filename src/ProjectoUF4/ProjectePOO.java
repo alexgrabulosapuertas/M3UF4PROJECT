@@ -3,6 +3,11 @@ package ProjectoUF4;
 import java.util.Scanner;
 
 public class ProjectePOO {
+    /**
+     * Main a un s'inicia el programa i es creen els objectes per a poder accedir als diferents fitxers .java
+     * @param args
+     * @since 04/06/2021
+     */
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         GestorDades carregarGestorDades = new GestorDades();
@@ -13,6 +18,19 @@ public class ProjectePOO {
         Consultes c = new Consultes();
         projecte(s, carregarGestorDades, botiga, ad, ibd, cbd, c);
     }
+
+    /**
+     * Funció on esta el menú amb les diferents opcións del programa, cada opció crida a les diferents funcions
+     * Se li passan tots els objectes per a poder cridar i passar a les diferents funcions sense crear nous objectes
+     * @param s
+     * @param carregarGestorDades
+     * @param botiga
+     * @param ad
+     * @param inserirBd
+     * @param cbd
+     * @param c
+     * @since 04/06/2021
+     */
     public static void projecte(Scanner s, GestorDades carregarGestorDades, Botiga botiga, AfegirDades ad, InserirBD inserirBd, ConnexioBD cbd, Consultes c){
         int opcioMenu;
         do {
@@ -30,7 +48,7 @@ public class ProjectePOO {
                     Interficie.mostrarPerPantalla("S'han carregat amb èxit les dades de la base de dades.");
                 }
                 case 2 -> {
-                    Interficie.imprimirCapcalera("Has seleccionat: Consultar");
+                    Interficie.imprimirCapcalera("Has seleccionat: Consultar dades");
                     String[] opcions_del_sub_menu = {"1. Empleat amb més salari", "2. Instrument més barat", "3. Vinil més antic","4. Mostrar informació","0. Tornar al menú principal"};
                     int opcioSubMenu;
                     do {
@@ -39,16 +57,16 @@ public class ProjectePOO {
                         opcioSubMenu = s.nextInt();
                         switch (opcioSubMenu) {
                             case 1 -> {
-                                Interficie.imprimirCapcalera("Has seleccionat: Empleat amb més salari.");
-                                c.consultarEmpleatMesSalari(cbd, botiga.getEmpleats());
+                                Interficie.imprimirCapcalera("Has seleccionat: Empleat amb el salari més alt.");
+                                c.consultarEmpleatMesSalari(botiga.getEmpleats());
                             }
                             case 2-> {
                                 Interficie.imprimirCapcalera("Has seleccionat: Instrument més barat.");
-                                c.consultarInstrumentMesBarat(cbd, botiga.getInstruments());
+                                c.consultarInstrumentMesBarat(botiga.getInstruments());
                             }
                             case 3-> {
                                 Interficie.imprimirCapcalera("Has seleccionat: Vinil més antic.");
-                                c.consultarVinilMesAntic(cbd, botiga.getVinils());
+                                c.consultarVinilMesAntic(botiga.getVinils());
                             }
                             case 4 -> {
                                 Interficie.imprimirCapcalera("Has seleccionat: Mostrar informació.");
@@ -67,7 +85,7 @@ public class ProjectePOO {
                     } while (opcioSubMenu != 0);
                 }
                 case 3 -> {
-                    Interficie.imprimirCapcalera("Has seleccionat: Afegir");
+                    Interficie.imprimirCapcalera("Has seleccionat: Afegir dades");
                     String[] opcions_del_sub_menu = {"1. Vinil", "2. Client", "3. Instrument","4. Empleat","0. Tornar al menú principal"};
                     Interficie.mostrarPerPantalla("Que vols afegir?");
                     int opcio_afegir;
@@ -85,7 +103,7 @@ public class ProjectePOO {
                     }while (opcio_afegir != 0);
                 }
                 case 4 -> {
-                    Interficie.imprimirCapcalera("Has seleccionat: Esborrar");
+                    Interficie.imprimirCapcalera("Has seleccionat: Esborrar dades");
                     Interficie.mostrarPerPantalla("Que vols esborrar?");
                     String[] opcionsEsborrar = {"1. Client", "2. Empleat", "3. Vinil", "4. Instrument", "0. Tornar al menú principal"};
                     int opcioSubMenuEsborrar;
