@@ -1,7 +1,7 @@
 
 # ProjecteUF4
 <h2>Esquema principal del projecte:</h2>
-<h3>Menú del programa</h3>
+<h3>Menú del programa:</h3>
 <ol>
 <li>Carregar dades de la base de dades.</li>
 <li>Consultar dades.
@@ -88,4 +88,39 @@
   
  ![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/13.png)
   
-  <h2>Vídeo:</h2>
+ <h2>Vídeo:</h2>
+  
+ <p>FALTA EL VIDE!!!!!!!!!!!!!!!!!</P>
+  
+<h2>PPO:</h2>
+<p>En el nostre programa tenim cinc principals objectes que venen determinats per les seves corresponents classes:
+  
+<h3>Botiga</h3>
+<p>Tenim una classe anomenada Botiga que té com atributs: botigaId, nom, adreça, població, ArrayList<Client>, ArrayList<Empleat>, ArrayList<Instrument>, ArrayList<Client>. A l'inicialitzar el programa creem una instància de la classe botiga utilitzant el constructor que no té paràmetres d'entrada perquè ja té els seus atributs definits. Utilitzant aquesta instància de la classe botiga li passem les diferents instàncies (empleat, client, vinil i instrument) utilitzant ArrayList per poder emmagatzemar-les dintre de la pròpia botiga. Això ens permetrà que si en un futur tenim diferents botigues puguem emmagatzemar la informació dividida per cada instància de la classe botiga. Nosaltres només utilitzarem una instància de la classe botiga i aquesta serà la que passem a totes les funcionalitats del nostre programa (carregar, consultar, afegir i eliminar dades). Que guardem els clients, els empleats, els instruments i els vinils en ArrayList ens permet d'una forma senzilla accedir a tots ells i mostrar un llistat de tots ells per pantalla. A aquesta classe també tenim un get i un set per a cada atribut, per a poder obtenir i substituir els valors dels diferents atributs. A part aquesta classe té una interfície (BotigaI) fet que fa que estigui obligada a tenir els mètodes que es defineixen dintre la interfície.</p>
+  
+<h3>Persona</h3>
+<p>Tenim la classe Persona, que és la classe pare de client i empleat, per tant heren tots els seus atributs i els seus mètodes. A la classe Persona tenim els atributs: botigaId, nom, cognom, DNI, edat, sexe, telèfon, email, adreça i població. Com la idea és crear interfícies utilitzant aquesta classe necessitem constructors així que hem creat dos constructors de Persona a més a més d'un get i un set per a tots els atributs de la classe Persona. Finalment hem fet la funció toString() per a obtenir el valor de tots els atributs.</p>
+
+<h3>Empleat/h3>
+<p>Tenim una classe anomenada Empleat que és una classe filla de la superclasse Persona per lo tant hereda els seus atributs i els seus mètodes. Els únics atributs que correspon a la classe empleat és empleatId i salari. En aquesta classe també tenim un get i un set per a cada atribut, per a poder obtenir i substituir els valors dels diferents atributs, juntament amb la funció toString per poder printar els seus atributs. A l'hora de carregar les dades de la base de dades creem una instància de la classe empleat per cada empleat i l'afegim a l'ArrayList d'empleats per poder emmagatzemar les dades en el nostre programa.</p>
+  
+<h3>Client</h3>
+<p>Tenim una classe anomenada Client que és una classe filla de la superclasse Persona per lo tant hereda els seus atributs i els seus mètodes. Els únics atributs que correspon a la classe client és clientId En aquesta classe també tenim un get i un set per a cada atribut, per a poder obtenir i substituir els valors dels diferents atributs, juntament amb la funció toString per poder printar els seus atributs, juntament amb la funció toString per poder printar els seus atributs. A l'hora de carregar les dades de la base de dades creem una instància de la classe client per cada client i l'afegim a l'ArrayList de clients per poder emmagatzemar les dades en el nostre programa.</p>
+  
+<h3>Vinil</h3>
+<p>Tenim una classe anomenada Vinil, en aquesta classe tenim els atributs vinilId, clientId, empleatId, nom, preu, autor, any i estil. Aquesta classe és utilitzada per a crear instàncies de Vinil, per aquest motiu tenim 2 constructors de Vinil. A aquesta classe també tenim un get i un set per a cada atribut, per a poder obtenir i substituir els valors dels diferents atributs. A més a més tenim la funció toString() a on obtenim els valors de tots els atributs per a poder printar-ho. Finalment tenim un enum dels Estils a on tenim els diferents estils.</p>
+
+<h3>Instrument</h3>
+<p>Tenim una classe anomenada Instrument, en aquesta classe tenim els atributs intstrumentId, clientId, empleatId, nom, tipus, color, material i preu. Aquesta classe es utilitzada principalment per a crear instàncies d'Instrument, per això tenim dos constructors. En aquesta classe també tenim un get i un set per a cada atribut, d'aquesta forma podem obtenir i substituir el valor de tots els atributs. A més a més tenim la funció toString() a on retornem el valor actual de tots els atributs per a poder printar-ho. Finalment tenim un enum COLOR a on tenim tots els colors disponibles pels instruments.</p>   
+   
+<h2>Version Control System:</h2>  
+<h3>Problemes</h3>
+<p>Al principi vam tenir problemes amb el github per les diferents branques, ja que no enteníem molt bé com fer els commits amb diferents branques i era una mica confós.</p>
+
+<h3>Solucions</h3>
+<p>Vam solucionar-ho buscant informació a internet i preguntant a classe i els companys ens van ajudar.</p>
+
+<h3>Decisions</h3>
+<p>Vam decidir tenir les següents classes Empleat, Instrument, Client i Vinil, després ens vam donar conta que estarien en una botiga la que seria un altre classe i que necessitaríem la classe Interfície per a poder printar, després vam fer classes per a les diferents opcions del menú i vam tenir les classes, AfegirDades, Consultes, GestorDades i ProjectePOO que és a on estaria el main i el menú. Després vam crear la classe ConnexioBD per a fer funcions per a connectar i desconnectar la BD i d'aquesta forma no haver de ficar el codi de la connecció i descconecció a cada opció. Després vam veure que l'Empleat i el Client tenien molts atributs en comú així que vam crear la classe Persona i vam fer que Client i Empleat fos extends de Persona. Finalment vam fer la interficie de Botiga anomenada BotigaI.</p>
+
+<p>Aniol Barrilado Colom, Àlex Grabolusa Puertas i Manel Colàs Casals - Projecte UF4 - M03 Programació</p>
