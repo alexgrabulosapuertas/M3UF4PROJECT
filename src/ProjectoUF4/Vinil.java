@@ -1,19 +1,31 @@
 package ProjectoUF4;
 
 public class Vinil {
-    private int vinil_id;
-    private int client_id;
-    private int empleat_id;
+    private int vinilId;
+    private int clientId;
+    private int empleatId;
     private String nom;
     private float preu;
     private String autor;
     private int any;
     private String estil;
+    private Estil estils;
 
-    public Vinil(int vinil_id, int client_id, int empleat_id, String nom_vinil, float preu_vinil, String autor_vinil, int any_vinil, String estil_vinil) {
-        this.vinil_id = vinil_id;
-        this.client_id = client_id;
-        this.empleat_id = empleat_id;
+    public Vinil(int vinilId, int clientId, int empleatId, String nom, float preu, String autor, int any, Estil estils) {
+        this.vinilId = vinilId;
+        this.clientId = clientId;
+        this.empleatId = empleatId;
+        this.nom = nom;
+        this.preu = preu;
+        this.autor = autor;
+        this.any = any;
+        this.estils = estils;
+    }
+
+    public Vinil(int vinilId, int clientId, int empleatId, String nom_vinil, float preu_vinil, String autor_vinil, int any_vinil, String estil_vinil) {
+        this.vinilId = vinilId;
+        this.clientId = clientId;
+        this.empleatId = empleatId;
         this.nom = nom_vinil;
         this.preu = preu_vinil;
         this.autor = autor_vinil;
@@ -53,28 +65,28 @@ public class Vinil {
         this.preu = preu;
     }
 
-    public int getVinil_id() {
-        return vinil_id;
+    public int getVinilId() {
+        return vinilId;
     }
 
-    public void setVinil_id(int vinil_id) {
-        this.vinil_id = vinil_id;
+    public void setVinilId(int vinilId) {
+        this.vinilId = vinilId;
     }
 
-    public int getClient_id() {
-        return client_id;
+    public int getClientId() {
+        return clientId;
     }
 
-    public void setClient_id(int client_id) {
-        this.client_id = client_id;
+    public void setClientId(int clientId) {
+        this.clientId = clientId;
     }
 
-    public int getEmpleat_id() {
-        return empleat_id;
+    public int getEmpleatId() {
+        return empleatId;
     }
 
-    public void setEmpleat_id(int empleat_id) {
-        this.empleat_id = empleat_id;
+    public void setEmpleatId(int empleatId) {
+        this.empleatId = empleatId;
     }
 
     public String getEstil() {
