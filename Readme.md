@@ -90,7 +90,8 @@
   
  <h2>Vídeo:</h2>
   
- <p>FALTA EL VIDE!!!!!!!!!!!!!!!!!</P>
+[![ScreenShot](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/CapturaVideo.jpg)](https://www.youtube.com/watch?v=QspTzNjmvJw&ab_channel=Manel)
+
   
 <h2>PPO:</h2>
 <p>En el nostre programa tenim sis principals classes de les quals es crearan les seves respectives instàncies.</p>
