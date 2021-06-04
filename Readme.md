@@ -94,7 +94,7 @@
 
   
 <h2>PPO:</h2>
-<p>En el nostre programa tenim sis principals classes de les quals es crearan les seves respectives instàncies.</p>
+<p>En el nostre programa tenim sis classes principals de les quals es crearan les seves respectives instàncies.</p>
   
 <h3>Botiga</h3>
 <p>Tenim una classe anomenada Botiga que té com atributs: botigaId, nom, adreça, població, ArrayList<Client>, ArrayList<Empleat>, ArrayList<Instrument>, ArrayList<Client>. A l'inicialitzar el programa creem una instància de la classe botiga utilitzant el constructor que no té paràmetres d'entrada perquè ja té els seus atributs definits. Utilitzant aquesta instància de la classe botiga li passem les diferents instàncies (empleat, client, vinil i instrument) utilitzant ArrayList per poder emmagatzemar-les dintre de la pròpia botiga. Això ens permetrà que si en un futur tenim diferents botigues puguem emmagatzemar la informació dividida per cada instància de la classe botiga. Nosaltres només utilitzarem una instància de la classe botiga i aquesta serà la que passem a totes les funcionalitats del nostre programa (carregar, consultar, afegir i eliminar dades). Que guardem els clients, els empleats, els instruments i els vinils en ArrayList ens permet d'una forma senzilla accedir a tots ells i mostrar un llistat de tots ells per pantalla. A aquesta classe també tenim un get i un set per a cada atribut, per a poder obtenir i substituir els valors dels diferents atributs. A part aquesta classe té una interfície (BotigaI) fet que fa que estigui obligada a tenir els mètodes que es defineixen dintre la interfície.</p>
