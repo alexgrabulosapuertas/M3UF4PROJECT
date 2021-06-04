@@ -101,7 +101,7 @@
 <h3>Persona</h3>
 <p>Tenim la classe Persona, que és la classe pare de client i empleat, per tant heren tots els seus atributs i els seus mètodes. A la classe Persona tenim els atributs: botigaId, nom, cognom, DNI, edat, sexe, telèfon, email, adreça i població. Com la idea és crear interfícies utilitzant aquesta classe necessitem constructors així que hem creat dos constructors de Persona a més a més d'un get i un set per a tots els atributs de la classe Persona. Finalment hem fet la funció toString() per a obtenir el valor de tots els atributs.</p>
 
-<h3>Empleat/h3>
+<h3>Empleat</h3>
 <p>Tenim una classe anomenada Empleat que és una classe filla de la superclasse Persona per lo tant hereda els seus atributs i els seus mètodes. Els únics atributs que correspon a la classe empleat és empleatId i salari. En aquesta classe també tenim un get i un set per a cada atribut, per a poder obtenir i substituir els valors dels diferents atributs, juntament amb la funció toString per poder printar els seus atributs. A l'hora de carregar les dades de la base de dades creem una instància de la classe empleat per cada empleat i l'afegim a l'ArrayList d'empleats per poder emmagatzemar les dades en el nostre programa.</p>
   
 <h3>Client</h3>
