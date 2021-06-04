@@ -49,7 +49,7 @@ public class ProjectePOO {
                 }
                 case 2 -> {
                     Interficie.imprimirCapcalera("Has seleccionat: Consultar dades");
-                    String[] opcions_del_sub_menu = {"1. Empleat amb més salari", "2. Instrument més barat", "3. Vinil més antic","4. Mostrar informació","0. Tornar al menú principal"};
+                    String[] opcions_del_sub_menu = {"1. Empleat amb el salari més alt", "2. Instrument més barat", "3. Vinil més antic","4. Mostrar informació","0. Tornar al menú principal"};
                     int opcioSubMenu;
                     do {
                         Interficie.titolMenu("SUBMENÚ");
