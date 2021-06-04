@@ -124,7 +124,52 @@
 <p>Vam decidir tenir les següents classes Empleat, Instrument, Client i Vinil, després ens vam donar conta que estarien en una botiga la que seria un altre classe i que necessitaríem la classe Interfície per a poder printar, després vam fer classes per a les diferents opcions del menú i vam tenir les classes, AfegirDades, Consultes, GestorDades i ProjectePOO que és a on estaria el main i el menú. Després vam crear la classe ConnexioBD per a fer funcions per a connectar i desconnectar la BD i d'aquesta forma no haver de ficar el codi de la connecció i descconecció a cada opció. Després vam veure que l'Empleat i el Client tenien molts atributs en comú així que vam crear la classe Persona i vam fer que Client i Empleat fos extends de Persona. Finalment vam fer la interficie de Botiga anomenada BotigaI.</p>
   
   
-  <h2>UML</h2>
-  <p>ESCRIBE AQUI EL TEXTO DEL ANIOL</p>
+  <h3> UML </h3>
+
+<h4> Diagrama de classes versió 1 </h4>
+
+![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/V1Complet.PNG)
+
+
+<h4> Diagrama de classes versió 2  </h4>
+
+![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/V2Complet.PNG)
+
+<p> En aquest diagrama a diferència de l'altre és pot veure com apareixen elements nous, com ara aparèix la taula "Concert" i "Carro". A la primera se li ha creat una generalització. D'altra banda la taula "Carro" permet calcular el preu total gastat per el client, també si aquest s'elimina la taula "Carro" també s'eliminara. També se li ha creat una associativa per a poder tenir el número del carro.
+
+<h4> Diagrama d'ús </h4>
+
+![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/UsComplet.PNG)
+
+<p> En aquest diagrama es pot veure com funciona la nostra aplicació, aquí teniu la documentació per a poder-ho entendre amb més facilitat. </p>
+
+<p> Aquestes són les funcions les quals podrà fer l'usuari Administrador </p>
+
+![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/A.Client.PNG)
+
+![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/A.Instrument.PNG)
+
+![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/A.Vinil.PNG)
+
+![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/E.Client.PNG)
+
+![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/E.Empleat.PNG)
+
+![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/E.Instrument.PNG)
+
+![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/E.Vinil.PNG)
+
+![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/ConsultaDades.PNG)
+
+![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/CarregarDades.PNG)
+
+<p> Aquestes són les funcions les quals podrà fer l'usuari Client </p>
+
+![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/S.Instrument.PNG)
+
+![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/S.Vinil.PNG)
+
+![alt text](https://github.com/alexgrabulosapuertas/M3UF4PROJECT/blob/master/img/Concert.PNG)
+
 
 <p>Aniol Barrilado Colom, Àlex Grabolusa Puertas i Manel Colàs Casals - Projecte UF4 - M03 Programació</p>
