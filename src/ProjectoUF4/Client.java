@@ -1,99 +1,41 @@
 package ProjectoUF4;
+public class Client extends Persona {
+    private int clientId;
 
-import java.util.ArrayList;
 
-public class Client {
-    private String nom;
-    private String telefon;
-    private String adreca;
-    private String DNI;
-    private String email;
-    private String[] cognoms;
-    private char sexe;
-    private int edat, id;
-    ArrayList<Client> clients = new ArrayList<Client>();
-
-    public Client(String nom, String[] cognoms, String telefon, String adreca, String DNI, char sexe, String email, int edat, int id) {
-        this.nom = nom;
-        this.cognoms = cognoms;
-        this.telefon = telefon;
-        this.adreca = adreca;
-        this.DNI = DNI;
-        this.sexe = sexe;
-        this.email = email;
-        this.edat = edat;
-        this.id = clients.size();
-        clients.add(new Client(nom, cognoms, telefon, adreca, DNI, sexe, email, edat, id));
+    public Client(int botigaId, String nom, String cognoms, String DNI, int edat, char sexe, String telefon, String email, String adreca, String poblacio, int clientId) {
+        super(botigaId, nom, cognoms, DNI, edat, sexe, telefon, email, adreca, poblacio);
+        this.clientId = clientId;
     }
 
-    public String getNom() {
-        return nom;
+    public Client(String nom, String cognoms, int clientId) {
+        super(nom, cognoms);
+        this.clientId = clientId;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public int getClientId() {
+        return clientId;
     }
 
-    public String[] getCognoms() {
-        return cognoms;
+    public void setClientId(int clientId) {
+        this.clientId = clientId;
     }
 
-    public void setCognoms(String[] cognoms) {
-        this.cognoms = cognoms;
-    }
 
-    public String getTelefon() {
-        return telefon;
-    }
-
-    public void setTelefon(String telefon) {
-        this.telefon = telefon;
-    }
-
-    public String getAdreca() {
-        return adreca;
-    }
-
-    public void setAdreca(String adreca) {
-        this.adreca = adreca;
-    }
-
-    public String getDNI() {
-        return DNI;
-    }
-
-    public void setDNI(String DNI) {
-        this.DNI = DNI;
-    }
-
-    public char getSexe() {
-        return sexe;
-    }
-
-    public void setSexe(char sexe) {
-        this.sexe = sexe;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getEdat() {
-        return edat;
-    }
-
-    public void setEdat(int edat) {
-        this.edat = edat;
-    }
-
-    public int getId(){
-        return id;
-    }
-    public void setId(){
-        this.id = id;
+    @Override
+    public String toString() {
+        return "Client{" +
+                "botigaId=" + botigaId +
+                ", nom='" + nom + '\'' +
+                ", cognoms='" + cognoms + '\'' +
+                ", DNI='" + DNI + '\'' +
+                ", edat=" + edat +
+                ", sexe=" + sexe +
+                ", telefon='" + telefon + '\'' +
+                ", email='" + email + '\'' +
+                ", adreca='" + adreca + '\'' +
+                ", poblacio='" + poblacio + '\'' +
+                ", clientId=" + clientId +
+                '}';
     }
 }
