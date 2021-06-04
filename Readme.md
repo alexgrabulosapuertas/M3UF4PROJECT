@@ -93,7 +93,7 @@
  <p>FALTA EL VIDE!!!!!!!!!!!!!!!!!</P>
   
 <h2>PPO:</h2>
-<p>En el nostre programa tenim cinc principals objectes que venen determinats per les seves corresponents classes:
+<p>En el nostre programa tenim sis principals classes de les quals es crearan les seves respectives instàncies.</p>
   
 <h3>Botiga</h3>
 <p>Tenim una classe anomenada Botiga que té com atributs: botigaId, nom, adreça, població, ArrayList<Client>, ArrayList<Empleat>, ArrayList<Instrument>, ArrayList<Client>. A l'inicialitzar el programa creem una instància de la classe botiga utilitzant el constructor que no té paràmetres d'entrada perquè ja té els seus atributs definits. Utilitzant aquesta instància de la classe botiga li passem les diferents instàncies (empleat, client, vinil i instrument) utilitzant ArrayList per poder emmagatzemar-les dintre de la pròpia botiga. Això ens permetrà que si en un futur tenim diferents botigues puguem emmagatzemar la informació dividida per cada instància de la classe botiga. Nosaltres només utilitzarem una instància de la classe botiga i aquesta serà la que passem a totes les funcionalitats del nostre programa (carregar, consultar, afegir i eliminar dades). Que guardem els clients, els empleats, els instruments i els vinils en ArrayList ens permet d'una forma senzilla accedir a tots ells i mostrar un llistat de tots ells per pantalla. A aquesta classe també tenim un get i un set per a cada atribut, per a poder obtenir i substituir els valors dels diferents atributs. A part aquesta classe té una interfície (BotigaI) fet que fa que estigui obligada a tenir els mètodes que es defineixen dintre la interfície.</p>
@@ -122,5 +122,8 @@
 
 <h3>Decisions</h3>
 <p>Vam decidir tenir les següents classes Empleat, Instrument, Client i Vinil, després ens vam donar conta que estarien en una botiga la que seria un altre classe i que necessitaríem la classe Interfície per a poder printar, després vam fer classes per a les diferents opcions del menú i vam tenir les classes, AfegirDades, Consultes, GestorDades i ProjectePOO que és a on estaria el main i el menú. Després vam crear la classe ConnexioBD per a fer funcions per a connectar i desconnectar la BD i d'aquesta forma no haver de ficar el codi de la connecció i descconecció a cada opció. Després vam veure que l'Empleat i el Client tenien molts atributs en comú així que vam crear la classe Persona i vam fer que Client i Empleat fos extends de Persona. Finalment vam fer la interficie de Botiga anomenada BotigaI.</p>
+  
+  
+  <h2>UML</h2>
 
 <p>Aniol Barrilado Colom, Àlex Grabolusa Puertas i Manel Colàs Casals - Projecte UF4 - M03 Programació</p>
